@@ -4,3 +4,5 @@
 - is the API paginated
 
 - Pagination can be of 2 types : front-end heavy and back-end heavy
+- how many products on a single page
+-
