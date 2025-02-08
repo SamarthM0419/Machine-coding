@@ -11,12 +11,13 @@ const AutoComplete = () => {
       "https://dummyjson.com/recipes/search?q=" + searchInput
     );
     const json = await data.json();
-    console.log(json?.recipes);
     setResults(json?.recipes);
   };
 
   useEffect(() => {
-    fetchData();
+    const timer = setTimeout(fetchData, 350);
+
+    return () => clearTimeout(timer);
   }, [searchInput]);
 
   return (
